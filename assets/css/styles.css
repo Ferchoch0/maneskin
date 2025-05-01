@@ -1,5 +1,6 @@
 /* GLOBALES */
 
+
 html {
     scroll-behavior: smooth;
   }
@@ -10,6 +11,7 @@ body {
     padding: 0px;
     font-family: 'Poppins', sans-serif;
     cursor: none;
+    --rush: #e90389;
 }
 
 .cursor {
@@ -220,6 +222,7 @@ nav {
 }
 
 .ai-info {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,12 +238,23 @@ nav {
     text-transform: uppercase;
 }
 
+.ai-title-logo img{
+    width: 350px;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    transform: rotate(20deg);
+}
+
 .ai-year {
+    position: absolute;
     color: #a8034a;
     font-size: 35px;
     font-weight: bold;
     margin: 0;
     margin-left: 10px;
+    bottom: 25px;
 }
 
 .ai-description {
