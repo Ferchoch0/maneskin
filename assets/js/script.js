@@ -1,11 +1,19 @@
-// Cambiar el color del cursor al pasar por encima de los enlaces
-
 const cursor = document.createElement("div");
-cursor.id = "maneskin-cursor";
+cursor.classList.add("cursor");
 document.body.appendChild(cursor);
 
-window.addEventListener("mousemove", (e) => {
-  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+let position = { x: 0, y: 0 };
+
+const moveCursor = (e) => {
+  position = { x: e.clientX, y: e.clientY };
+  cursor.style.left = `${position.x}px`;
+  cursor.style.top = `${position.y}px`;
+};
+
+window.addEventListener("mousemove", moveCursor);
+
+window.addEventListener("beforeunload", () => {
+  window.removeEventListener("mousemove", moveCursor);
 });
 
 //mantener activa la sección del menú al hacer scroll

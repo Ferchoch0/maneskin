@@ -12,18 +12,17 @@ body {
     cursor: none;
 }
 
-#maneskin-cursor {
+.cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     background-color: rgba(168, 3, 74, 0.7);
     border: 1.5px solid white;
     border-radius: 50%;
     pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.15s ease, background-color 0.3s ease;
+    z-index: 999;
     mix-blend-mode: difference;
   }
 
