@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/icon.css">
   <title>Document</title>
-  <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -17,7 +16,7 @@
       <h3 class="nav-title">Måneskin</h3>
     </div>
 
-    <div class="nav-list">
+    <div class="nav-list" id="nav-list">
 
       <div class="nl-seccion"><span class="album-icon"></span><a href="#home">Inicio</a></div>
       <div class="nl-seccion"><span class="album-icon"></span><a href="#album">Album</a></div>
@@ -33,9 +32,11 @@
 
   </nav>
 
-  <header id="home" class="album-header">
-    <span class="ah-title">RUSH!</span>
-    <span class="ah-subtitle">nuevo álbum</span>
+  <header>
+    <section id="home" class="album-header">
+      <span class="ah-title">RUSH!</span>
+      <span class="ah-subtitle">nuevo álbum</span>
+    </section>
   </header>
 
   <section id="album" class="album-container">
@@ -51,7 +52,7 @@
         </div>
       </div>
       <div class="ai-description-container">
-        <p class="ai-description">El nuevo álbum de Maneskin explora temas de amor y el caos de la vida moderna, combinando su característico sonido rock con emoción y energía crudas.</p>
+        <p class="ai-description">El <span style="color: #a8034a;">nuevo álbum de Maneskin</span> explora temas de amor y el caos de la vida moderna, combinando su característico sonido rock con emoción y energía crudas.</p>
         <button class="ai-btn">Escuchar Ahora</button>
       </div>
 
@@ -139,5 +140,7 @@
 
 
 </body>
+
+<script src="/web4davinci/assets/js/script.js"></script>
 
 </html>

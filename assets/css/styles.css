@@ -9,7 +9,29 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
+    cursor: none;
 }
+
+#maneskin-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(168, 3, 74, 0.7);
+    border: 1.5px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, background-color 0.3s ease;
+    mix-blend-mode: difference;
+  }
+
+  a:hover, a:focus, button:hover {
+    cursor: none;
+    pointer-events: none;
+    }
+  
 
 /* NAVBAR */
 
@@ -94,8 +116,12 @@ nav {
     color: #a8034a;
     transition: 0.3s;
     transform: translateY(-3px);
-    cursor: pointer;
 }
+
+.nav-list a.active {
+    color: #a8034a;
+    font-weight: bold;
+  }
 
 /* BANNER */
 
@@ -232,7 +258,6 @@ nav {
     font-size: 15px;
     font-weight: bold;
     border: none;
-    cursor: pointer;
     border-bottom: 2px solid #f11072;
     border-right: 2px solid #f11072;
     border-top: 2px solid linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
